@@ -1,4 +1,4 @@
-function __node_binpath_cwd -v PWD
+function _node_binpath_cwd -v PWD
   set -l node_modules_path "$PWD/node_modules/.bin"
   if test -e "$node_modules_path"
     set -g __node_binpath "$node_modules_path"
@@ -10,5 +10,3 @@ function __node_binpath_cwd -v PWD
       and set -e __node_binpath
   end
 end
-
-__node_binpath_cwd $PWD
